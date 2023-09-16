@@ -11,8 +11,4 @@
     <EditorConfigFiles Remove="C:\Users\ad805\source\repos\DecoratorDesignPattern\DecoratorDesignPattern\.editorconfig" />
   </ItemGroup>
 
-  <ItemGroup>
-    <None Include="C:\Users\ad805\source\repos\DecoratorDesignPattern\DecoratorDesignPattern\.editorconfig" />
-  </ItemGroup>
-
 </Project>

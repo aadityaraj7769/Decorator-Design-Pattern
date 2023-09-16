@@ -1,4 +1,4 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DecoratorDesignPattern;
 using DecoratorDesignPattern.Decorator;
 using DecoratorDesignPattern.Color;
@@ -7,14 +7,14 @@ using DecoratorDesignPattern.CarDecorator_;
 namespace UnitTests
 {
     [TestClass]
-    public class UnitTest1 : BlackCar
+    public class UnitTest1
 
     {
         [TestMethod]
         public void TestMethod1()
         {
-            //-------
-            BlackCar blackCarObj = new BlackCar();
+            // Creating an object of black car
+            BlackCar blackCarObj = new();
             int price = blackCarObj.PriceOfCar();
             string car_ = blackCarObj.NameOfCar();
 
@@ -24,7 +24,7 @@ namespace UnitTests
             Assert.AreEqual("Black Car", car_);
             Assert.AreEqual(100000, price);
 
-            //-------
+            //Decorate the black car with air bag 
             CarDecorator carWithAirBag = new AirBag(blackCarObj);
 
             int airPrice = carWithAirBag.PriceOfCar();
@@ -36,11 +36,11 @@ namespace UnitTests
             Assert.AreEqual("Black Car With Air Bag ", car_);
             Assert.AreEqual(110000, airPrice);
 
-            //-------
-            CarDecorator carWithAirBag_AirCondition = new AirConditioner(carWithAirBag);
+            //Again decorate with air conditioner
+            CarDecorator carWithAirBagAirCondition = new AirConditioner(carWithAirBag);
 
-            int airCondBag = carWithAirBag_AirCondition.PriceOfCar();
-            car_ = carWithAirBag_AirCondition.NameOfCar();
+            int airCondBag = carWithAirBagAirCondition.PriceOfCar();
+            car_ = carWithAirBagAirCondition.NameOfCar();
 
             Console.WriteLine(car_);
             Console.WriteLine(airCondBag);
@@ -49,7 +49,7 @@ namespace UnitTests
             Assert.AreEqual(140000, airCondBag);
 
             //-------
-            CarDecorator carBagACLeather = new LeatherSeat(carWithAirBag_AirCondition);
+            CarDecorator carBagACLeather = new LeatherSeat(carWithAirBagAirCondition);
             int bagACLeather = carBagACLeather.PriceOfCar();
             car_ = carBagACLeather.NameOfCar();
             Console.WriteLine(car_);

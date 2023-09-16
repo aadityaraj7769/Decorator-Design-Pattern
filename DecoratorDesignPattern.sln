@@ -5,12 +5,9 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DecoratorDesignPattern", "DecoratorDesignPattern\DecoratorDesignPattern.csproj", "{D643667E-0489-4F81-A737-81B9D6B3D002}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{1C2F9226-E52D-460B-B61D-A6C4A7D70F27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{1C2F9226-E52D-460B-B61D-A6C4A7D70F27}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Decorator-Design-Pattern", "Decorator-Design-Pattern", "{1E391FC9-64A3-4A0F-9D2A-CCCDC0415017}"
-	ProjectSection(SolutionItems) = preProject
-		DecoratorDesignPattern\.editorconfig = DecoratorDesignPattern\.editorconfig
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
